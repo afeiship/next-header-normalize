@@ -15,7 +15,26 @@ npm install -S @jswork/next-header-normalize
 ```js
 import '@jswork/next-header-normalize';
 
-//DOCS here!
+const header = {
+  'AcceptLanguage': 'zh-CN',
+  'contentLength': 521,
+  'X-Powered-By': null,
+  'Content-Type': 'application/json; charset=utf-8',
+  'cache-control': 'public, max-age=31536000',
+  'authorization': 'Bearer xxx.my-token+'
+};
+
+const result = nx.headerNormalize(header, { lowerCase: true, compact: true });
+
+/*
+{
+  'accept-language': 'zh-CN',
+  'content-length': 521,
+  'content-type': 'application/json; charset=utf-8',
+  'cache-control': 'public, max-age=31536000',
+  'authorization': 'Bearer xxx.my-token+'
+}
+*/
 ```
 
 ## license
