@@ -1,7 +1,7 @@
 {
   "name": "@jswork/next-header-normalize",
   "version": "1.0.1",
-  "description": "Normalize http header case.",
+  "description": "Normalize http header.",
   "homepage": "https://github.com/afeiship/next-header-normalize",
   "author": {
     "name": "afei",
