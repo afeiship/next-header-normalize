@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-header-normalize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Normalize http header case.",
   "homepage": "https://github.com/afeiship/next-header-normalize",
   "author": {
@@ -44,5 +44,13 @@
   "dependencies": {
     "@jswork/next-capitalize": "^1.0.0",
     "@jswork/next-kebab-case": "^1.0.1"
-  }
+  },
+  "keywords": [
+    "next",
+    "header",
+    "http",
+    "normalize",
+    "compact",
+    "lowercase"
+  ]
 }
