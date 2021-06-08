@@ -1,5 +1,5 @@
 # next-header-normalize
-> Normalize http header case.
+> Normalize http header.
 
 [![version][version-image]][version-url]
 [![license][license-image]][license-url]
