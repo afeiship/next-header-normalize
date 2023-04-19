@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-header-normalize",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Normalize http header.",
   "homepage": "https://js.work",
   "author": {
@@ -47,5 +47,14 @@
   "dependencies": {
     "@jswork/next-capitalize": "^1.0.1",
     "@jswork/next-kebab-case": "^1.0.3"
-  }
+  },
+  "keywords": [
+    "next",
+    "header",
+    "http",
+    "normalize",
+    "compact",
+    "lowercase",
+    "content-type"
+  ]
 }
