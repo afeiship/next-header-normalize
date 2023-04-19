@@ -1,24 +1,24 @@
-(function () {
-  var global = typeof window !== 'undefined' ? window : this || Function('return this')();
-  var nx = global.nx || require('@jswork/next');
-  var nxKebabCase = nx.kebabCase || require('@jswork/next-kebab-case');
-  var nxCapitalize = nx.capitalize || require('@jswork/next-capitalize');
-  var defaults = { lowerCase: false, compact: false };
-  var CHAR_DASH = '-';
+import nx from '@jswork/next';
+import '@jswork/next-kebab-case';
+import '@jswork/next-capitalize';
 
-  nx.headerNormalize = function (inObject, inOptions) {
-    var options = nx.mix(null, defaults, inOptions);
-    var result = {};
-    nx.forIn(inObject, function (key, value) {
-      var dashlized = nxKebabCase(key);
-      var str = dashlized.split(CHAR_DASH).map(nxCapitalize).join(CHAR_DASH);
-      var newKey = options.lowerCase ? str.toLowerCase() : str;
-      (!options.compact || (options.compact && value != null)) && (result[newKey] = value);
-    });
-    return result;
-  };
+const defaults = { lowerCase: false, compact: false };
+const CHAR_DASH = '-';
 
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = nx.headerNormalize;
-  }
-})();
+nx.headerNormalize = function (inObject, inOptions) {
+  const options = nx.mix(null, defaults, inOptions);
+  const result = {};
+  nx.forIn(inObject, function (key, value) {
+    const dashlized = nx.kebabCase(key);
+    const str = dashlized.split(CHAR_DASH).map(nx.capitalize).join(CHAR_DASH);
+    const newKey = options.lowerCase ? str.toLowerCase() : str;
+    (!options.compact || (options.compact && value != null)) && (result[newKey] = value);
+  });
+  return result;
+};
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = nx.headerNormalize;
+}
+
+export default nx.headerNormalize;
